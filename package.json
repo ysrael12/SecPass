@@ -1,0 +1,29 @@
+{
+  "name": "sec-pass",
+  "version": "1.0.0",
+  "description": "this project will help to me get employed",
+  "main": "Main.js",
+  "scripts": {
+    "test": "try"
+  },
+  "author": "Ysrael (yzzi)",
+  "license": "ISC",
+  "dependencies": {
+    "@inquirer/prompts": "^5.1.0",
+    "bcrypt": "^5.1.1",
+    "chalk": "^5.3.0",
+    "csv": "^6.3.9",
+    "csv-parser": "^3.0.0",
+    "figlet": "^1.7.0",
+    "inquirer": "^9.3.2",
+    "json2csv": "^6.0.0-alpha.2",
+    "nodemon": "^3.1.4",
+    "prompt-sync": "^4.2.0",
+    "sequelize": "^6.37.3",
+    "sqlite3": "^5.1.7"
+  },
+  "type": "module",
+  "bin": {
+    "SecPass": "./Main.js"
+  }
+}
