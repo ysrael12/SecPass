@@ -160,4 +160,7 @@ dist
 .history
 .ionide
 
-# End of https://www.toptal.com/developers/gitignore/api/node,visualstudiocode
+#Sec Pass Ignore local Db and CSV Exported
+*.csv 
+*.sqlite
+
