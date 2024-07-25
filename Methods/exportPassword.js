@@ -29,10 +29,9 @@ async function exportPasswords() {
     const parser = new Parser(opts);
     const csv = parser.parse(passwordsData);
 
-    const thisUser = await User.findAll({where: {
-      userId : userId
-    }})
-    const exportPath = path.join(process.cwd(), `exported_${thisUser.username}_passwords.csv`);
+    const user = await User.findAll({where: {id : userId}})
+        
+    const exportPath = path.join(process.cwd(), `exported_${user.map(data => data.username )}_passwords.csv`);
     fs.writeFileSync(exportPath, csv);
 
     log(chalk.green(`Passwords exported successfully to ${exportPath}`));

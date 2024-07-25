@@ -21,7 +21,12 @@ export default async function listUserPasswords() {
         const userPasswords = await Passwords.findAll({ where: { userId: userId } });
         const formattedPasswords = userPasswords.map(pwd => formatPassword(pwd.dataValues)).join("\n\n");
 
-        log(formattedPasswords);
+        if(userPasswords.length == 0){
+            log(chalk.redBright("You not Have passwords!!!"))
+        }
+        else {
+            log(formattedPasswords);
+        }
     } catch (error) {
         log("Error fetching passwords: " + error.message);
     }
