@@ -31,7 +31,7 @@ A command-line password manager developed with pure Node.js, enabling users to c
 To start the password manager, run:
 ```bash
 node Main.js
-
+```
 
 # Features
 Main Menu (listMethods.js)
